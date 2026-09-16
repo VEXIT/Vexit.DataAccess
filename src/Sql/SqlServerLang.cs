@@ -57,6 +57,9 @@ public class SqlServerLang : ISqlLang
 
     public string GetUtcDate() => "getutcdate()";
 
+    public string GetUtcDateOnly() => "cast(getutcdate() as date)";
+
+
     public string InsertIntoValues(
      string schema,
      string table,

@@ -80,7 +80,16 @@ public interface ISqlLang
     string GetBool(bool value);
 
     string GetDate();
+
+    /// <summary>
+    /// 
+    /// </summary>
     string GetUtcDate();
+
+    /// <summary>
+    /// Gets date part of the utc date
+    /// </summary>
+    string GetUtcDateOnly();
 
     /// <summary>
     /// INSERT template; <paramref name="values"/> is the VALUES clause body (literals or <c>@param</c> placeholders).

@@ -46,8 +46,8 @@ public class PostgresLang : ISqlLang
 
     public string GetBool(bool value) => value ? "true" : "false";
     public string GetDate() => "now()";
-
-    public string GetUtcDate() => "now() at time zone 'utc'";
+    public string GetUtcDate() => "timezone('utc', now())";
+    public string GetUtcDateOnly() => "date(timezone('utc', now()))";
 
     public string InsertIntoValues(
     string schema,

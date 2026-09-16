@@ -49,6 +49,7 @@ public class SQLiteLang : ISqlLang
     public string GetBool(bool value) => value ? "1" : "0";
     public string GetDate() => "date('now')";
     public string GetUtcDate() => "datetime('now')";
+    public string GetUtcDateOnly() => "date('now')";
 
     public string InsertIntoValues(string schema, string table, string values, bool returnId = false, params string[] fields)
     {
